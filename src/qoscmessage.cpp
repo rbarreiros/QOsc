@@ -217,7 +217,8 @@ void QOscMessage::swap(QOscMessage& other)
 bool QOscMessage::isValid() const
 {
     Q_D(const QOscMessage);
-    return !d->pattern.isEmpty() && d->matcher.isValid() && !isEmpty();
+    //return !d->pattern.isEmpty() && d->matcher.isValid() && !isEmpty();
+    return !d->pattern.isEmpty() && d->matcher.isValid();
 }
 
 bool QOscMessage::match(const QString& addr) const
